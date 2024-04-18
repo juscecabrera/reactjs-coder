@@ -1,0 +1,10 @@
+.cartwidget-svg {
+    margin: 0 1rem;
+    cursor: pointer;
+    
+}
+
+.cartwidget-svg:hover {
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}

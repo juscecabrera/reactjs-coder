@@ -1,0 +1,49 @@
+.navbar-wrapper {
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgb(92, 196, 231);
+}
+.navbar-wrapper ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+.navbar-wrapper ul li {
+  margin: 0 1rem;
+}
+.navbar-wrapper ul a {
+  cursor: pointer;
+  font-weight: normal;
+}
+.navbar-wrapper ul a:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+
+.itemlistcontainer-wrapper {
+  height: 10px;
+}
+
+.cartwidget-svg {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.cartwidget-svg:hover {
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+}/*# sourceMappingURL=main.css.map */
