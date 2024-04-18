@@ -14,8 +14,10 @@ function ItemListContainer(props) {
         else setCantItems (cantItems + 0)
     }
 
+    let showCart = true;
+
     return(
-        <div className="itemlistcontainer-wrapper">
+        <div className={showCart ? "itemlistcontainer-wrapper" : "itemlistcontainer-wrapper hidden"}>
             <h1 className="itemlistcontainer-h1">{props.greeting}</h1>
             <div className="itemlistcontainer-counter-wrapper">
             <p className="itemlistcontainer-product">{props.products}</p>

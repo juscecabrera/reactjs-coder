@@ -67,6 +67,10 @@
   border: 1px dotted black;
 }
 
+.hidden {
+  display: none;
+}
+
 .cartwidget-svg {
   margin: 0 1rem;
   cursor: pointer;
