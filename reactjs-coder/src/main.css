@@ -1,9 +1,9 @@
 .navbar-wrapper {
-  padding: 2rem 5rem;
+  padding: 2rem 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-flow: row nowrap;
   background-color: rgb(92, 196, 231);
 }
 .navbar-wrapper ul {
@@ -25,7 +25,46 @@
 }
 
 .itemlistcontainer-wrapper {
-  height: 10px;
+  border: 1px solid black;
+  min-width: 5rem;
+  max-width: 20rem;
+  margin-left: 47%;
+  padding: 1rem;
+  padding-top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.itemlistcontainer-wrapper .itemlistcontainer-h1 {
+  font-size: 2rem;
+  margin: 1.5rem;
+}
+.itemlistcontainer-wrapper .itemlistcontainer-counter-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.itemlistcontainer-wrapper .itemlistcontainer-counter-wrapper .itemlistcontainer-product {
+  font-size: 1rem;
+  margin: 0 0 0 2rem;
+  min-width: 7rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.itemlistcontainer-wrapper .itemlistcontainer-counter-wrapper button {
+  padding: 0.2rem 0.8rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+}
+.itemlistcontainer-wrapper .itemlistcontainer-counter-wrapper button:hover {
+  background-color: rgba(128, 128, 128, 0.197);
+}
+.itemlistcontainer-wrapper .itemlistcontainer-counter-wrapper span {
+  margin: 0.5rem;
+  padding: 0.7rem;
+  border: 1px dotted black;
 }
 
 .cartwidget-svg {

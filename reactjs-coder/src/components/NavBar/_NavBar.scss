@@ -1,9 +1,9 @@
 .navbar-wrapper {
-    padding: 2rem 5rem;
+    padding: 2rem 4.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-flow: row nowrap;
     background-color: rgb(92, 196, 231);
     ul {
         display: flex;
