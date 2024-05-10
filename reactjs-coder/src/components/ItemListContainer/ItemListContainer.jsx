@@ -59,7 +59,6 @@ function ItemListContainer(props) {
 
         <div>
           <ItemList productsList={products}/>
-
         </div>
         </main>
     )

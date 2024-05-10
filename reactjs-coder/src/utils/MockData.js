@@ -5,7 +5,7 @@ export const products = [
       description: "Bolsa de Comida para perros Ricocan Multisabores en presentación de 15kg",
       price: 120,
       stock: 10,
-      category: "Comida seca para perros"
+      category: "Perros"
     },
     {
       id: 2,
@@ -13,7 +13,7 @@ export const products = [
       description: "Pate de sabor pescado y atún para gatos en presentación lata de 156gr",
       price: 7,
       stock: 100,
-      category: "Comida húmeda para gatos"
+      category: "Gatos"
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ export const products = [
       description: "Pate de sabor salmón para gatos en presentación lata de 156gr",
       price: 7,
       stock: 150,
-      category: "Comida húmeda para gatos"
+      category: "Gatos"
     },
     {
       id: 4,
@@ -29,7 +29,7 @@ export const products = [
       description: "Trozos de sabor Pescado y Atún para gatos en presentación lata de 156gr",
       price: 8,
       stock: 200,
-      category: "Comida húmeda para gatos"
+      category: "Gatos"
     },
     {
       id: 5,
@@ -37,7 +37,7 @@ export const products = [
       description: "Pate sabor cordero para perros en presentación lata de 256gr",
       price: 8,
       stock: 120,
-      category: "Comida húmeda para perros"
+      category: "Perros"
     },
 ]
 
@@ -52,10 +52,10 @@ export const getProducts = () => {
 export const getProductsByCategory = (categoryId) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const productsFilter = products.filter((e) => {
+      const productsFilter = products.filter((elem) => {
         let match = false;
-        e.category.find((elem) => {
-          if (elem === categoryId) return match = true;
+        elem.category.find((elem) => {
+          if (elem === categoryId) match = true;
         });
         return match;
       });

@@ -8,8 +8,9 @@ function NavBar() {
             <ul>
                 <Link to="/"><li>Inicio</li></Link>
                 <Link to="/products"><li>Productos</li></Link>
-                {/* <Link to="/category/"></Link> */}
-                {/* Falta aca tener los datos correspondientes y con ellos podemos configurar las categorias */}
+                <Link to="/category/perros"><li>Perros</li></Link>
+                <Link to="/category/gatos"><li>Gatos</li></Link>
+
             </ul>
             <CartWidget />
         </div>

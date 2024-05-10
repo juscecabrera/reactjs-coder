@@ -6,9 +6,9 @@ export const ItemDetail = ({id, name, description, price, stock, category}) => {
       <>
       <h3>{name}</h3>
       <p>{description}</p>
-      <p>{price}</p>
-      <p>{stock}</p>
-      <p>{category}</p>
+      <p>Precio: {price}</p>
+      <p>Stock: {stock}</p>
+      <p>Categoria: {category}</p>
       </>
     )
 };
