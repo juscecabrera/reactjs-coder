@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB4DpljjfpxcmBbIRopcVU7sNmRoeM7sMg",
-  authDomain: "pokestore-jusce-cabrera.firebaseapp.com",
-  projectId: "pokestore-jusce-cabrera",
-  storageBucket: "pokestore-jusce-cabrera.appspot.com",
-  messagingSenderId: "1028071667502",
-  appId: "1:1028071667502:web:3698bc0a7461b8c805acbf"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase
