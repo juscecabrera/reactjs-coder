@@ -92,5 +92,63 @@ body {
 }
 
 .footer-wrapper {
-  border: 1px solid black;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(92, 196, 231);
+}
+
+table {
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  margin: 2rem;
+}
+table thead tr th {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+table tbody tr td {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+table tbody tr td button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.clearcart-button, .completepurchase-button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 1rem 0 1rem 2rem;
+}
+
+.cart-form {
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  padding: 2rem;
+}
+.cart-form input {
+  margin: 1rem;
+  width: 10rem;
+  height: 3rem;
+}
+.cart-form input::-moz-placeholder {
+  padding: 0.5rem;
+}
+.cart-form input::placeholder {
+  padding: 0.5rem;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+}
+
+.home-img {
+  width: 100%;
+  margin-bottom: -0.5rem;
 }/*# sourceMappingURL=main.css.map */

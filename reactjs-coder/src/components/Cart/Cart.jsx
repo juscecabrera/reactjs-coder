@@ -41,7 +41,7 @@ function Cart() {
       <table>
         <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -57,7 +57,7 @@ function Cart() {
                 <td>{price}</td>
                 <td>{quantity}</td>
                 <td>
-                  <button onClick={() => handleRemoveItem(id, price, qty)}>
+                  <button onClick={() => handleRemoveItem(id, price, quantity)}>
                     Remove Item
                   </button>
                 </td>
@@ -70,8 +70,10 @@ function Cart() {
           </tr>
         </tbody>
       </table>
-      <button onClick={() => {clearCart}}>Clear Cart</button>
+      <button onClick={clearCart} className="clearcart-button">Clear Cart</button>
 
+    <form className="cart-form">
+      <label>Nombre</label>
       <input
         type="text"
         name="name"
@@ -79,6 +81,7 @@ function Cart() {
         placeholder="Ingrese nombre"
         onChange={(e) => handleOnChange(e)}
       />
+      <label>Número</label>
       <input
         type="number"
         name="tel"
@@ -86,6 +89,7 @@ function Cart() {
         placeholder="Ingrese telefono"
         onChange={(e) => handleOnChange(e)}
       />
+      <label>Email</label>
       <input
         type="email"
         name="email"
@@ -93,7 +97,9 @@ function Cart() {
         placeholder="Ingrese email"
         onChange={(e) => handleOnChange(e)}
       />
-      <button onClick={handleSaveCart}>Finalizar Compra</button>
+
+    </form>
+      <button onClick={handleSaveCart} className="completepurchase-button">Finalizar Compra</button>
     </>
   )
 }

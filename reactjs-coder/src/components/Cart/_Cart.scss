@@ -1,0 +1,54 @@
+@mixin table-border {
+    border: 1px solid rgb(0,0,0);
+    border-collapse: collapse;
+}
+@mixin button-border {
+    border: 1px solid rgb(0,0,0,0.2);
+}
+
+table {
+    @include table-border();
+    margin: 2rem;
+    thead {
+        tr {
+            th {
+                padding: 0.5rem 1rem;
+                @include table-border();
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                padding: 0.5rem 1rem;
+                @include table-border();
+                button {
+                    @include button-border();
+                }
+                
+            }
+        }
+    }
+}
+
+.clearcart-button, .completepurchase-button {
+    @include button-border();
+    margin: 1rem 0 1rem 2rem;
+}
+
+.cart-form {
+    @include table-border();
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    padding: 2rem;
+    input {
+        margin: 1rem;
+        width: 10rem;
+        height: 3rem;
+    }
+    input::placeholder {
+        padding: 0.5rem;
+    }
+}

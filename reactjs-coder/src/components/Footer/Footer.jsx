@@ -3,7 +3,7 @@ import "../../main.css";
 
 function Footer() {
   return (
-    <div className='footer-wrapper'>Este es el footer</div>
+    <div className='footer-wrapper'>PetShop © | Todos los derechos reservados</div>
   )
 }
 
