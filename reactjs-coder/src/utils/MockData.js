@@ -5,7 +5,7 @@ export const products = [
       description: "Bolsa de Comida para perros Ricocan Multisabores en presentación de 15kg",
       price: 120,
       stock: 10,
-      category: "Perros"
+      category: ["Perros"]
     },
     {
       id: 2,

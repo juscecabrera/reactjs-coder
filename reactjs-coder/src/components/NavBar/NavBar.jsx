@@ -10,9 +10,9 @@ function NavBar() {
                 <Link to="/products"><li>Productos</li></Link>
                 <Link to="/category/perros"><li>Perros</li></Link>
                 <Link to="/category/gatos"><li>Gatos</li></Link>
-
+                <Link to="/cart">{<CartWidget />}</Link>
             </ul>
-            <CartWidget />
+            
         </div>
     )
 };

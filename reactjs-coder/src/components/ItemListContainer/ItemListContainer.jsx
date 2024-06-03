@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { getProducts, getProductsByCategory } from "../../utils/MockData.js";
 import { ItemList } from "../ItemList/ItemList.jsx";
+import { db } from "../../firebase/dbConnection.js";
+import { collection, getDoc, getDocs, query, where } from "firebase/firestore";
 
 
-function ItemListContainer(props) {
+function ItemListContainer() {
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true)
@@ -15,20 +17,45 @@ function ItemListContainer(props) {
     useEffect(() => {
         setLoading(true);
 
+        const productsCollection = collection(db, "productos")
+
         if (catId) {
-            getProductsByCategory(catId).then((res) => {
-                setProducts(res);
+            
+            const cons = query(productsCollection, where("category", "array-contains", catId))
+            
+            getDocs(cons)
+            .then(({ docs }) => {
+                const prodFromDocs = docs.map(doc => ({id: doc.id, ...doc.data()}))
+                console.log(prodFromDocs);
+                setProducts(prodFromDocs)
                 setLoading(false);
+            }).catch((err) => {
+                console.error(err.message)
             })
+            // getProductsByCategory(catId).then((res) => {
+            //     setProducts(res);
+            //     setLoading(false);
+            // })
         } else {
-            getProducts()
-            .then((res) => {
-                setProducts(res);
+            getDocs(productsCollection)
+                .then(({ docs }) => {
+                const prodFromDocs = docs.map(doc => ({id: doc.id, ...doc.data()}))
+                console.log(prodFromDocs);
+                setProducts(prodFromDocs)
                 setLoading(false);
+            }).catch((err) => {
+                console.error(err.message)
             })
-            .catch((err) => {
-                console.log(err)
-            })
+            
+
+            // getProducts()
+            // .then((res) => {
+            //     setProducts(res);
+            //     setLoading(false);
+            // })
+            // .catch((err) => {
+            //     console.log(err)
+            // })
         }
     }, [catId])
 
